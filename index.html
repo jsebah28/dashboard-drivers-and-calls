@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Document</title>
+
+</head>
+<title>Tooltip que sigue al cursor</title>
+<body id="body">
+    <div class="main-content">
+
+        <div class="tab-bar">
+            <button onclick="openInfo('Llamadas')">Llamadas</button>
+            <button onclick="openInfo('Espera')">En Espera</button>
+            <button onclick="openInfo('Asignados')">Asignados</button>
+        </div>
+
+        <!-- <input type="checkbox" id="miCheckbox"> -->
+
+        <aside class="sidebar">
+            <div class="user-login-box">
+                <div class="user-photo" >
+                    <img src="./images/driver-1.png" alt="" >
+                </div>
+                <div class="user-info-login">
+                    <span class="user-name">Sebastian</span>
+                    <span class="user-rol">Agente Call Center</span>
+                </div>
+            </div>
+            <div class="exit">
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/cities-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Ciudad</li>
+                </div>
+            </div>
+            <ul class="sidebar-items">
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/home-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Inicio</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/earphone-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Callcenter</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/chat-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Chat</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/special-clients.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Clientes especiales</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/history-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Historial</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/calls-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Llamadas</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/maintance-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Mantenimiento</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/monitor-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Monitor</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/permissions-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Permisos</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/charges-icons.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Recaudos</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/simcards-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Simcards</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/places-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Sitios</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/suspensions-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Suspensiones</li>
+                </div>
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/driver-icon.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Taxistas</li>
+                </div>
+            </ul>
+            <div class="exit">
+                <div class="portal-items">
+                    <div class="sidebar-icons-box">
+                        <img src="./images/charges-icons.svg" alt="" class="sidebar-icons">
+                    </div>
+                    <li>Salir</li>
+                </div>
+                
+            </div>
+        </aside>
+
+        <div class="main-section">
+            <!-- 1 -->
+            <div class="calls-monitor info" id="Llamadas">
+                <div class="agents-row">
+                    
+                    
+                    <!-- agente -->
+                    <div class="agent-info">
+                        <div class="agent-photo" >
+                            <img src="./images/Jhon.png" alt="">                         
+                        </div>
+                        <svg class="circle-status" width="15" height="15" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10.7727" cy="10.9091" r="10" fill="#54A956"/>
+                        </svg>
+                        
+                        <div class="agent-info-text">
+                            <span>Jhon</span>
+                            <span>Disponible</span>
+                            <span style="visibility: hidden;">00:36</span>
+                        </div>
+                    </div>
+                    <!-- agente -->
+                <!-- agente -->
+                <div class="agent-info">
+                    <div class="agent-photo" >
+                        <img src="./images/carlos.png" alt="">                         
+                    </div>
+                    <svg class="circle-status" width="15" height="15" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10.7727" cy="10.9091" r="10" fill="#1565C0"/>
+                    </svg>
+                    
+                    <div class="agent-info-text">
+                        <span>Carlos</span>
+                        <span>Timbrando</span>
+                        <span style="visibility: hidden;">00:36</span>
+                    </div>
+                </div>
+                <!-- agente -->
+                    <!-- agente -->
+                    <div class="agent-info">
+                        <div class="agent-photo" >
+                            <img src="./images/gabriela.png" alt="">                         
+                        </div>
+                        <svg class="circle-status" width="15" height="15" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10.7727" cy="10.9091" r="10" fill="#F6BB43"/>
+                        </svg>
+                        <div class="agent-info-text">
+                            <span>Gabriela</span>
+                            <span>3188220056</span>
+                            <span>01:12</span>
+                        </div>
+                    </div>
+                    <!-- agente -->
+                    <!-- agente -->
+                    <div class="agent-info">
+                        <div class="agent-photo" >
+                            <img src="./images/juanpablo.png" alt="">                         
+                        </div>
+                        <svg class="circle-status" width="15" height="15" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10.7727" cy="10.9091" r="10" fill="#F6BB43"/>
+                        </svg>
+                        
+                        <div class="agent-info-text">
+                            <span>Juan Pablo</span>
+                            <span>3188220056</span>
+                            <span>00:36</span>
+                        </div>
+                    </div>
+                    <!-- agente -->
+                    <!-- agente -->
+                    <div class="agent-info">
+                        <div class="agent-photo" >
+                            <img src="./images/miguel.png" alt="">                         
+                        </div>
+                        <svg class="circle-status" width="15" height="15" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10.7727" cy="10.9091" r="10" fill="#F6BB43"/>
+                        </svg>
+                        
+                        <div class="agent-info-text">
+                            <span>Miguel</span>
+                            <span>3188220056</span>
+                            <span>00:49</span>
+                        </div>
+                    </div>
+                    <!-- agente -->
+                </div>
+                <div class="calls-counters">
+                    <div>
+                        <img src="./images/waiting-call.svg" alt="">
+                        <span>En espera</span>
+                        <span>13</span>
+                    </div>
+                    <div>
+                        <img src="./images/in-process-call.svg" alt="">
+                        <span>En proceso</span>
+                        <span>3</span>
+                    </div>
+                </div>
+                <div class="calls-table-div">
+                    <table class="table-calls">
+                        <tr>
+                            <th>Número</th>
+                            <th>Estado</th>
+                            <th>Hora</th>
+                            <th>Espera</th>
+                        </tr>
+                        <tr class="hang-up-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/hang-up.svg" alt="">Colgado</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="hang-up-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/hang-up.svg" alt="">Colgado</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="hang-up-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/hang-up.svg" alt="">Colgado</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        
+                        <tr class="ringing-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/ringing-call.svg" alt="">Timbrando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="ringing-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/ringing-call.svg" alt="">Timbrando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="ringing-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/ringing-call.svg" alt="">Timbrando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr><tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                        <tr class="waiting-call">
+                            <td>3188220056</td>
+                            <td><img src="./images/waiting-call.svg" alt="">Esperando</td>
+                            <td>01:23 p.m.</td>
+                            <td>01:30</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="new-services info" id="Espera">
+                <div class="moviles-status">
+                    <div>
+                        <span>Todos</span>
+                        <div class="value-movil-status">
+                            <img src="./images/taxi-icon.svg" alt="">
+                            <span>1869</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Disponibles</span>
+                        <div class="value-movil-status">
+                            <svg class="circle-moviles-status" width="15" height="15" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10.7727" cy="10.9091" r="10" fill="#54A956"/>
+                            </svg>
+                            <span>96</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span>En servicio</span>
+                        <div class="value-movil-status">
+                            <svg class="circle-moviles-status" width="15" height="15" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10.7727" cy="10.9091" r="10" fill="#1565C0"/>
+                            </svg>
+                            <span>1701</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Todos</span>
+                        <div class="value-movil-status">
+                            <svg class="circle-moviles-status" width="15" height="15" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10.7727" cy="10.9091" r="10" fill="#F6BB43"/>
+                            </svg>
+                            <span>72</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="moviles-newservices-colum">
+                    <!-- servicio card -->
+                    <div class="card-service">
+                        <div class="info-service">
+                            <div class="source">
+                                <img src="./images/phone-icon.svg" alt="">
+                                <span>1</span>
+                            </div>
+                            <div class="time-wait">
+                                <span>00:25</span>
+                            </div>
+                            <div class="user-name">
+                                <img src="./images/user-icon.svg" alt="">
+                                <span>Yohanna Quiñonez</span>
+                            </div>
+                            <div class="phone-number">
+                                <span>3167177545</span>
+                            </div>
+                        </div>
+                        <div class="info-origin">
+                            <span>Quintas Del Campestre | Carrera 21 # 35 264</span>
+                            <span>Cañaveral · Floridablanca</span>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!-- servicio card -->
+                    <div class="card-service">
+                        <div class="info-service">
+                            <div class="source">
+                                <img src="./images/phone-icon.svg" alt="">
+                                <span>1</span>
+                            </div>
+                            <div class="time-wait">
+                                <span>00:25</span>
+                            </div>
+                            <div class="user-name">
+                                <img src="./images/user-icon.svg" alt="">
+                                <span>Yohanna Quiñonez</span>
+                            </div>
+                            <div class="phone-number">
+                                <span>3167177545</span>
+                            </div>
+                        </div>
+                        <div class="info-origin">
+                            <span>Quintas Del Campestre | Carrera 21 # 35 264</span>
+                            <span>Cañaveral · Floridablanca</span>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!-- servicio card -->
+                    <div class="card-service">
+                        <div class="info-service">
+                            <div class="source">
+                                <img src="./images/phone-icon.svg" alt="">
+                                <span>1</span>
+                            </div>
+                            <div class="time-wait">
+                                <span>00:25</span>
+                            </div>
+                            <div class="user-name">
+                                <img src="./images/user-icon.svg" alt="">
+                                <span>Yohanna Quiñonez</span>
+                            </div>
+                            <div class="phone-number">
+                                <span>3167177545</span>
+                            </div>
+                        </div>
+                        <div class="info-origin">
+                            <span>Quintas Del Campestre | Carrera 21 # 35 264</span>
+                            <span>Cañaveral · Floridablanca</span>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!-- servicio card -->
+                    <div class="card-service">
+                        <div class="info-service">
+                            <div class="source">
+                                <img src="./images/phone-icon.svg" alt="">
+                                <span>1</span>
+                            </div>
+                            <div class="time-wait">
+                                <span>00:25</span>
+                            </div>
+                            <div class="user-name">
+                                <img src="./images/user-icon.svg" alt="">
+                                <span>Yohanna Quiñonez</span>
+                            </div>
+                            <div class="phone-number">
+                                <span>3167177545</span>
+                            </div>
+                        </div>
+                        <div class="info-origin">
+                            <span>Quintas Del Campestre | Carrera 21 # 35 264</span>
+                            <span>Cañaveral · Floridablanca</span>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!-- servicio card -->
+                    <div class="card-service">
+                        <div class="info-service">
+                            <div class="source">
+                                <img src="./images/phone-icon.svg" alt="">
+                                <span>1</span>
+                            </div>
+                            <div class="time-wait">
+                                <span>00:25</span>
+                            </div>
+                            <div class="user-name">
+                                <img src="./images/user-icon.svg" alt="">
+                                <span>Yohanna Quiñonez</span>
+                            </div>
+                            <div class="phone-number">
+                                <span>3167177545</span>
+                            </div>
+                        </div>
+                        <div class="info-origin">
+                            <span>Quintas Del Campestre | Carrera 21 # 35 264</span>
+                            <span>Cañaveral · Floridablanca</span>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!-- servicio card -->
+                    <div class="card-service">
+                        <div class="info-service">
+                            <div class="source">
+                                <img src="./images/phone-icon.svg" alt="">
+                                <span>1</span>
+                            </div>
+                            <div class="time-wait">
+                                <span>00:25</span>
+                            </div>
+                            <div class="user-name">
+                                <img src="./images/user-icon.svg" alt="">
+                                <span>Yohanna Quiñonez</span>
+                            </div>
+                            <div class="phone-number">
+                                <span>3167177545</span>
+                            </div>
+                        </div>
+                        <div class="info-origin">
+                            <span>Quintas Del Campestre | Carrera 21 # 35 264</span>
+                            <span>Cañaveral · Floridablanca</span>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!-- servicio card -->
+                    <div class="card-service">
+                        <div class="info-service">
+                            <div class="source">
+                                <img src="./images/phone-icon.svg" alt="">
+                                <span>1</span>
+                            </div>
+                            <div class="time-wait">
+                                <span>00:25</span>
+                            </div>
+                            <div class="user-name">
+                                <img src="./images/user-icon.svg" alt="">
+                                <span>Yohanna Quiñonez</span>
+                            </div>
+                            <div class="phone-number">
+                                <span>3167177545</span>
+                            </div>
+                        </div>
+                        <div class="info-origin">
+                            <span>Quintas Del Campestre | Carrera 21 # 35 264</span>
+                            <span>Cañaveral · Floridablanca</span>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!-- servicio card -->
+                    <div class="card-service">
+                        <div class="info-service">
+                            <div class="source">
+                                <img src="./images/phone-icon.svg" alt="">
+                                <span>1</span>
+                            </div>
+                            <div class="time-wait">
+                                <span>00:25</span>
+                            </div>
+                            <div class="user-name">
+                                <img src="./images/user-icon.svg" alt="">
+                                <span>Yohanna Quiñonez</span>
+                            </div>
+                            <div class="phone-number">
+                                <span>3167177545</span>
+                            </div>
+                        </div>
+                        <div class="info-origin">
+                            <span>Quintas Del Campestre | Carrera 21 # 35 264</span>
+                            <span>Cañaveral · Floridablanca</span>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                
+            </div>
+            <!-- 3 -->
+            <div class="assigned-services info" id="Asignados">
+                <!-- servicio card -->
+                <div class="card-service-assigned">
+                    <div class="movil-number">
+                        <img src="./images/logo.svg" alt="">
+                        <span>536</span>
+                    </div>
+                    <div>
+                        <div class="info-service">
+                            <div class="source">
+                                <img src="./images/phone-icon.svg" alt="">
+                                <span>1</span>
+                            </div>
+                            <div class="time-wait">
+                                <span>3 min</span>
+                            </div>
+                            <div class="user-name">
+                                <img src="./images/user-icon.svg" alt="">
+                                <span>Yohanna Quiñonez</span>
+                            </div>
+                            <div class="phone-number">
+                                <span>3167177545</span>
+                            </div>
+                        </div>
+                        <div class="info-origin">
+                            <span>Quintas Del Campestre | Carrera 21 # 35 264</span>
+                            <span>Cañaveral · Floridablanca</span>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- servicio card -->
+                <div class="card-service-assigned">
+                    <div class="movil-number">
+                        <img src="./images/logo.svg" alt="">
+                        <span>2569</span>
+                    </div>
+                    <div>
+                        <div class="info-service">
+                            <div class="source">
+                                <img src="./images/phone-icon.svg" alt="">
+                                <span>1</span>
+                            </div>
+                            <div class="time-wait">
+                                <span>3 min</span>
+                            </div>
+                            <div class="user-name">
+                                <img src="./images/user-icon.svg" alt="">
+                                <span>Yohanna Quiñonez</span>
+                            </div>
+                            <div class="phone-number">
+                                <span>3167177545</span>
+                            </div>
+                        </div>
+                        <div class="info-origin">
+                            <span>Quintas Del Campestre | Carrera 21 # 35 264</span>
+                            <span>Cañaveral · Floridablanca</span>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
