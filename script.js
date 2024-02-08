@@ -50,7 +50,7 @@ document.getElementById('cambiarImagen4').addEventListener('click', function() {
   miElemento.style.backgroundImage = 'url(images/3.jpg)';
 });
 
-
+/* tabs para cambiar de pestaña */
 function openInfo(tabName) {
   var i;
   var x = document.getElementsByClassName("info");
@@ -59,3 +59,71 @@ function openInfo(tabName) {
   }
   document.getElementById(tabName).style.display = "block";
 }
+/*  */
+
+/* modo noche cambiando variables de colores */
+
+/* function toggleDarkMode() {
+  const root = document.documentElement;
+  const currentMode = root.getAttribute("data-mode");
+
+  if (currentMode === "dark") {
+    root.setAttribute("data-mode", "light");
+    root.style.setProperty("--backgroundcolor", "#e6e6e6");
+    root.style.setProperty("--cardscolor", "#f5f5f5");
+    root.style.setProperty("--fontcolor", "#3c3c3f");
+    root.style.setProperty("--bluecolor", "#1565C0");
+    root.style.setProperty("--red", "#C62828");
+  } else {
+    root.setAttribute("data-mode", "dark");
+    root.style.setProperty("--backgroundcolor", "#1f1f1f");
+    root.style.setProperty("--cardscolor", "#262626");
+    root.style.setProperty("--fontcolor", "#ececec");
+    root.style.setProperty("--bluecolor", "#64b5f6");
+    root.style.setProperty("--red", "#e57373");
+  }
+} */
+
+/*  */
+
+/* modo oscuro guardando en el local storage */
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Aplicar el modo oscuro si está guardado en el localStorage
+  const darkMode = localStorage.getItem("darkMode");
+  if (darkMode === "true") {
+    enableDarkMode();
+  }
+});
+
+function toggleDarkMode() {
+  const currentMode = localStorage.getItem("darkMode") === "true";
+  localStorage.setItem("darkMode", !currentMode);
+  if (!currentMode) {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+}
+
+function enableDarkMode() {
+  const root = document.documentElement;
+  root.setAttribute("data-mode", "dark");
+  root.style.setProperty("--backgroundcolor", "#1f1f1f");
+  root.style.setProperty("--cardscolor", "#262626");
+  root.style.setProperty("--fontcolor", "#ececec");
+  root.style.setProperty("--bluecolor", "#64b5f6");
+  root.style.setProperty("--red", "#e57373");
+}
+
+function disableDarkMode() {
+  const root = document.documentElement;
+  root.setAttribute("data-mode", "light");
+  root.style.setProperty("--backgroundcolor", "#e6e6e6");
+  root.style.setProperty("--cardscolor", "#f5f5f5");
+  root.style.setProperty("--fontcolor", "#3c3c3f");
+  root.style.setProperty("--bluecolor", "#1565C0");
+  root.style.setProperty("--red", "#C62828");
+}
+
+/*  */
